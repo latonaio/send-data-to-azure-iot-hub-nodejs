@@ -1,0 +1,50 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    run: send-data-to-azure-iot-hub
+  name: send-data-to-azure-iot-hub
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: send-data-to-azure-iot-hub
+  strategy:
+    rollingUpdate:
+  template:
+    metadata:
+      labels:
+        run: send-data-to-azure-iot-hub
+    spec:
+      hostname: send-data-to-azure-iot-hub
+      containers:
+      - name: send-data-to-azure-iot-hub
+        tty: true
+        image: send-data-to-azure-iot-hub
+        imagePullPolicy: IfNotPresent
+        env:
+        - name: TERMINAL_NAME
+          value: "terminal_name"
+        - name: MAC_ADDRESS
+          value: "02:00:00:00:00:00"
+        - name: RABBITMQ_URL
+          value: "amqp://username:password@hostname:5672/virtualhost"
+        - name: QUEUE_FROM
+          value: "queue_name"
+        - name: AZURE_IOT_CONNECTION_STRING
+          value: "connection_string"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: send-data-to-azure-iot-hub
+  name: send-data-to-azure-iot-hub
+spec:
+  selector:
+    run: send-data-to-azure-iot-hub
+  type: NodePort
+  ports:
+  - port: 12345
+    targetPort: 12345
+    protocol: TCP
