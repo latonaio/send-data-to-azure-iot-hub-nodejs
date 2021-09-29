@@ -16,7 +16,7 @@ Azure IoT Hub にエッジからデータを送信するときに、AION では�
 
 `send-data-to-azure-iot-hub.yaml` 内の env を以下の通り書き換えてください。
 
-(端末名・MAC アドレスは端末を一位に特定するために送信します)
+(端末名・MAC アドレスは端末を一意に特定するために送信します)
 
 * `TERMINAL_NAME`: 端末名
 * `MAC_ADDRESS`: MAC アドレス
