@@ -2,7 +2,9 @@
 
 ## 概要
 
-指定した RabbitMQ のキューから受け取ったメッセージを Azure IoT Hub に送信するためのマイクロサービスです。
+AION では、Data Stack / Data Hub としてAzure IoT Hub を推奨しています。    
+Azure IoT Hub にエッジからデータを送信するときに、AION では、エッジ側で RabbitMQ を使っています。  
+本マイクロサービスは、エッジで RabbitMQ のキューから受け取ったメッセージを、エッジから Azure IoT Hub に送信するためのマイクロサービスです。  
 
 
 ## 動作環境
