@@ -29,7 +29,7 @@ const main = async () => {
     console.log('received:', mqMessage.data);
     const mqMessageData = mqMessage.data;
 
-    const additionalData = {
+    const data = {
       terminalName,
       macAddress,
       createdAt: new Date().toISOString(),
@@ -39,11 +39,9 @@ const main = async () => {
       fuga: mqMessageData.fuga || null,
     };
 
-    const iotHubMessage = new Message(JSON.stringify({
-      ...additionalData,
-    }));
+    const iotHubMessage = new Message(JSON.stringify(data));
     await iotHubClient.sendEvent(iotHubMessage);
-    console.log('sent', additionalData);
+    console.log('sent', data);
     mqMessage.success();
   }
 };
