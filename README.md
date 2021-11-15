@@ -42,7 +42,7 @@ Azure IoT Hub にエッジ環境からデータを送信するときに、メッ
 入力データのJSONフォーマットは、inputs/sample.json にある通り、次の様式です。  
 ```
 {
-    "imagePath": "/var/lib/aion/Data/direct-next-service_1/1634173065679.jpg",
+    "imagePath": "/var/lib/aion/Data/azure-face-api-registrator-kube/1634173065679.jpg",
     "faceId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "responseData": {
         "candidates": []
@@ -57,7 +57,7 @@ Azure IoT Hub にエッジ環境からデータを送信するときに、メッ
    "terminalName": "xxxxx",
    "macAddress": "xx:xx:xx:xx:xx:xx",
    "createdAt": "2021-10-16T03:13:27.539Z",
-   "imagePath": "/var/lib/aion/Data/direct-next-service_1/1634354006794.jpg",
+   "imagePath": "/var/lib/aion/Data/azure-face-api-registrator-kube/1634354006794.jpg",
    "faceId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
    "responseData": {
        "candidates": []
