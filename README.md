@@ -15,6 +15,19 @@ AION では、Azure IoT Hub にエッジ環境からデータを送信すると�
 * Kubernetes 導入済みのエッジ環境
 * Nodejs Runtime
 
+## Azure IoT Hub SDK の 参照ライブラリ（Node.js SDK）  
+
+本レポジトリ内の package.json の下記に記載された箇所において、Azure IoT Hub SDK の ライブラリとして [azure-iot-sdk-node](https://github.com/Azure/azure-iot-sdk-node) を参照しています。    
+azure-iot-sdk-node の バージョン については、[こちら](https://github.com/Azure/azure-iot-sdk-node/releases)を参照してください。  
+
+```
+  "dependencies": {
+    "azure-iot-device": "^1.17.8",
+    "azure-iot-device-amqp": "^1.13.8",
+    "rabbitmq-client": "latonaio/rabbitmq-nodejs-client"
+  }
+```
+
 ## 初期設定
 
 `send-data-to-azure-iot-hub-nodejs.yaml` 内の env を以下の通り書き換えてください。
