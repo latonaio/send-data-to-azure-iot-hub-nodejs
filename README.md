@@ -13,6 +13,7 @@ AION では、Azure IoT Hub にエッジ環境からデータを送信すると�
 * CPU: ARM/AMD/Intel
 * RabbitMQ もしくは AION 導入済みのエッジ環境
 * Kubernetes 導入済みのエッジ環境
+* Nodejs Runtime
 
 ## 初期設定
 
