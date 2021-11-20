@@ -1,7 +1,7 @@
-# send-data-to-azure-iot-hub
+# send-data-to-azure-iot-hub-nodejs
 
-AION では、主にエッジコンピューティング環境からデータを収集・管理維持するための Data Stack / Data Hub として、Node.jsランタイムにおいて、Azure IoT Hub を推奨しています。      
-Azure IoT Hub にエッジ環境からデータを送信するときに、メッセージングアーキテクチャとして、AION では、エッジ側で RabbitMQ が利用されています。  
+AION では、主にエッジコンピューティング環境からデータを収集・管理維持するための Data Stack / Data Hub として、Azure IoT Hub を、一つの重要な選択肢として選択しています。       
+AION では、Azure IoT Hub にエッジ環境からデータを送信するときに、メッセージングアーキテクチャとして、エッジ側で RabbitMQ が利用されています。  
 本マイクロサービスは、エッジで RabbitMQ のキューから受け取ったメッセージを、エッジから Azure IoT Hub に送信するためのマイクロサービスです。  
 本マイクロサービスは、エッジ環境側にセットアップされるリソースです。
 
@@ -16,14 +16,14 @@ Azure IoT Hub にエッジ環境からデータを送信するときに、メッ
 
 ## 初期設定
 
-`send-data-to-azure-iot-hub.yaml` 内の env を以下の通り書き換えてください。
+`send-data-to-azure-iot-hub-nodejs.yaml` 内の env を以下の通り書き換えてください。
 
 (端末名・MAC アドレスは端末を一意に特定するために送信します)
 
 * `TERMINAL_NAME`: 端末名
 * `MAC_ADDRESS`: MAC アドレス
 * `RABBITMQ_URL`: RabbitMQ の受信元 URL
-* `QUEUE_FROM`: メッセージを受信する RabbitMQ キュー
+* `QUEUE_ORIGIN`: メッセージを受信する RabbitMQ キュー
 * `AZURE_IOT_CONNECTION_STRING`: Azure IoT Hub から取得した接続文字列
 
 
@@ -33,7 +33,7 @@ Azure IoT Hub にエッジ環境からデータを送信するときに、メッ
 ## 導入方法
 
 * `make docker-build` を実行します。
-* `kubectl apply -f send-data-to-azure-iot-hub.yaml` を実行します。
+* `kubectl apply -f send-data-to-azure-iot-hub-nodejs.yaml` を実行します。
 
 ## I/O
 #### Input
