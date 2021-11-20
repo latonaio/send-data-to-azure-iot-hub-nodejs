@@ -3,7 +3,7 @@
 FROM node:14.17.5-bullseye-slim
 
 ENV POSITION=Runtime \
-    SERVICE=send-data-to-azure-iot-hub \
+    SERVICE=send-data-to-azure-iot-hub-nodejs \
     AION_HOME=/var/lib/aion
 
 ENV TZ Asia/Tokyo

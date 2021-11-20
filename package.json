@@ -1,5 +1,5 @@
 {
-  "name": "send-data-to-azure-iot-hub",
+  "name": "send-data-to-azure-iot-hub-nodejs",
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
@@ -13,6 +13,6 @@
   "dependencies": {
     "azure-iot-device": "^1.17.6",
     "azure-iot-device-amqp": "^1.13.6",
-    "rabbitmq-client": "git+ssh://git@bitbucket.org/latonaio/rabbitmq-nodejs-client.git#develop"
+    "rabbitmq-client": "latonaio/rabbitmq-nodejs-client"
   }
 }

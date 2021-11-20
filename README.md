@@ -1,6 +1,6 @@
 # send-data-to-azure-iot-hub
 
-AION では、主にエッジコンピューティング環境からデータを収集・管理維持するための Data Stack / Data Hub として、Python / Node.jsランタイムにおいて、Azure IoT Hub を推奨しています。      
+AION では、主にエッジコンピューティング環境からデータを収集・管理維持するための Data Stack / Data Hub として、Node.jsランタイムにおいて、Azure IoT Hub を推奨しています。      
 Azure IoT Hub にエッジ環境からデータを送信するときに、メッセージングアーキテクチャとして、AION では、エッジ側で RabbitMQ が利用されています。  
 本マイクロサービスは、エッジで RabbitMQ のキューから受け取ったメッセージを、エッジから Azure IoT Hub に送信するためのマイクロサービスです。  
 本マイクロサービスは、エッジ環境側にセットアップされるリソースです。
