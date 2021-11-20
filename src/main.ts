@@ -9,8 +9,8 @@ const main = async () => {
     // RabbitMQ
     (async () => {
       const url = process.env.RABBITMQ_URL;
-      const queueFrom = process.env.QUEUE_FROM;
-      return await RabbitmqClient.create(url, [queueFrom], []);
+      const queueOrigin = process.env.QUEUE_ORIGIN;
+      return await RabbitmqClient.create(url, [queueORIGIN], []);
     })(),
 
     // Azure IoT Hub
